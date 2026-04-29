@@ -30,7 +30,7 @@ export default function Slide01Portada({ onNext, onMenu, current, total }: Props
         </header>
 
         {/* Body */}
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="slide-body body-grid body-2col">
 
           {/* Left */}
           <div>

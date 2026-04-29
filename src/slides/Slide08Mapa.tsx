@@ -61,7 +61,7 @@ export default function Slide08Mapa({ onNext, onBack, onMenu, current, total }: 
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3.5rem", alignItems: "center" }}>
+        <div className="slide-body body-grid body-2col">
 
           {/* Left — process map */}
           <div>

@@ -68,7 +68,7 @@ export default function Slide07Raci({ onNext, onBack, onMenu, current, total }: 
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "3rem", alignItems: "start" }}>
+        <div className="slide-body body-grid body-3-2">
 
           {/* Left — table */}
           <div>
@@ -79,26 +79,28 @@ export default function Slide07Raci({ onNext, onBack, onMenu, current, total }: 
 
             <h2 className="slide-title">Matriz <em>RACI</em></h2>
 
-            <table className="tbl">
-              <thead>
-                <tr>
-                  <th>Proceso</th>
-                  <th style={{ textAlign: "center" }}>Gestión Corporativa</th>
-                  <th style={{ textAlign: "center" }}>Progr. Municipales</th>
-                  <th style={{ textAlign: "center" }}>Soporte TI</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((row, i) => (
-                  <tr key={i}>
-                    <td>{row.proceso}</td>
-                    <td style={{ textAlign: "center" }}><RaciBadge v={row.gc} /></td>
-                    <td style={{ textAlign: "center" }}><RaciBadge v={row.pm} /></td>
-                    <td style={{ textAlign: "center" }}><RaciBadge v={row.ti} /></td>
+            <div className="tbl-wrap">
+              <table className="tbl" style={{ minWidth: 480 }}>
+                <thead>
+                  <tr>
+                    <th>Proceso</th>
+                    <th style={{ textAlign: "center" }}>Gestión Corporativa</th>
+                    <th style={{ textAlign: "center" }}>Progr. Municipales</th>
+                    <th style={{ textAlign: "center" }}>Soporte TI</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {data.map((row, i) => (
+                    <tr key={i}>
+                      <td>{row.proceso}</td>
+                      <td style={{ textAlign: "center" }}><RaciBadge v={row.gc} /></td>
+                      <td style={{ textAlign: "center" }}><RaciBadge v={row.pm} /></td>
+                      <td style={{ textAlign: "center" }}><RaciBadge v={row.ti} /></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {/* Legend */}
             <div style={{ display: "flex", gap: "1.25rem", marginTop: "1rem", flexWrap: "wrap" }}>

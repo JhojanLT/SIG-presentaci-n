@@ -79,7 +79,7 @@ export default function Slide09Riesgos({ onNext, onBack, onMenu, current, total 
 
           <h2 className="slide-title">Matriz de <em>Riesgos</em></h2>
 
-          <div style={{ overflowX: "auto", flex: 1 }}>
+          <div className="tbl-wrap" style={{ flex: 1 }}>
             <table className="tbl" style={{ fontSize: "0.75rem", minWidth: 780 }}>
               <thead>
                 <tr>

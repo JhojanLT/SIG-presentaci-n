@@ -72,7 +72,7 @@ export default function Slide03Politica({ onNext, onBack, onMenu, current, total
           </h2>
 
           {/* Three pillars */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", flex: 1 }}>
+          <div className="grid-3" style={{ flex: 1 }}>
             {pillars.map((p, i) => (
               <div key={i} className="card" style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
                 {/* Top row */}

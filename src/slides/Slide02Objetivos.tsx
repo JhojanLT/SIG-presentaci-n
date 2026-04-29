@@ -36,7 +36,7 @@ export default function Slide02Objetivos({ onNext, onBack, onMenu, current, tota
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+        <div className="slide-body body-grid body-2col-start">
 
           {/* Left */}
           <div>

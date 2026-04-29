@@ -51,7 +51,7 @@ const insights = [
   { title: "Controles propuestos",        text: "Digitalización, mantenimiento adecuado y prácticas sostenibles como medidas de mitigación." },
 ];
 
-export default function Slide10RiesgosAmb({ onBack, onMenu, current, total }: Props) {
+export default function Slide10RiesgosAmb({ onNext, onBack, onMenu, current, total }: Props) {
   return (
     <>
       <style>{tokens}</style>
@@ -70,7 +70,7 @@ export default function Slide10RiesgosAmb({ onBack, onMenu, current, total }: Pr
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "3rem", alignItems: "start" }}>
+        <div className="slide-body body-grid body-1-3">
 
           {/* Left */}
           <div>
@@ -102,8 +102,8 @@ export default function Slide10RiesgosAmb({ onBack, onMenu, current, total }: Pr
           </div>
 
           {/* Right — table */}
-          <div style={{ overflowX: "auto" }}>
-            <table className="tbl" style={{ fontSize: "0.73rem" }}>
+          <div className="tbl-wrap">
+            <table className="tbl" style={{ fontSize: "0.73rem", minWidth: 720 }}>
               <thead>
                 <tr>
                   {["Proceso", "Actividad", "Aspecto ambiental", "Impacto ambiental", "Medio", "Control sugerido"].map(h => (
@@ -131,9 +131,7 @@ export default function Slide10RiesgosAmb({ onBack, onMenu, current, total }: Pr
         <footer className="slide-footer">
           <button className="sf-btn" onClick={onBack}>← Anterior</button>
           <span className="sf-label">{SLIDE_NAMES[current - 1]}</span>
-          <button className="sf-btn" onClick={onMenu} style={{ background: "var(--ink)", color: "var(--bg)", borderColor: "var(--ink)" }}>
-            Volver al Menú ↗
-          </button>
+          <button className="sf-btn" onClick={onNext}>Siguiente →</button>
         </footer>
 
       </div>

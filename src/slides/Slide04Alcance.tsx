@@ -76,7 +76,7 @@ export default function Slide04Alcance({ onNext, onBack, onMenu, current, total 
             Animal-ID
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", flex: 1 }}>
+          <div className="grid-3" style={{ flex: 1 }}>
             {cols.map((col, i) => (
               <div
                 key={i}

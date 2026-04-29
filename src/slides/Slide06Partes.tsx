@@ -41,7 +41,7 @@ export default function Slide06Partes({ onNext, onBack, onMenu, current, total }
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "3rem", alignItems: "start" }}>
+        <div className="slide-body body-grid body-3-2">
 
           {/* Left — matrix */}
           <div>
@@ -58,17 +58,9 @@ export default function Slide06Partes({ onNext, onBack, onMenu, current, total }
               <div style={{ background: "var(--ink)", color: "var(--bg)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", padding: "0.4rem 1rem", textAlign: "center", fontWeight: 500 }}>
                 PODER ↕
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+              <div className="matrix">
                 {quadrants.map((q, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      padding: "1.25rem",
-                      borderRight: i % 2 === 0 ? "1px solid var(--line)" : "none",
-                      borderBottom: i < 2 ? "1px solid var(--line)" : "none",
-                      background: i % 2 === 0 && i < 2 ? "white" : i < 2 ? "var(--accent-2)" : "white",
-                    }}
-                  >
+                  <div key={i} className="matrix-cell">
                     <p style={{ fontFamily: "'DM Serif Display', serif", fontSize: "0.88rem", color: q.accent, marginBottom: "0.2rem" }}>{q.label}</p>
                     <p style={{ fontSize: "0.6rem", color: "var(--ink-3)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>{q.sub}</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
@@ -88,7 +80,7 @@ export default function Slide06Partes({ onNext, onBack, onMenu, current, total }
           </div>
 
           {/* Right — insights */}
-          <div style={{ paddingTop: "5rem" }}>
+          <div>
             {insights.map((item, i) => (
               <div key={i} style={{ paddingBottom: "1.5rem", marginBottom: "1.5rem", borderBottom: i < insights.length - 1 ? "1px solid var(--line)" : "none" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.4rem" }}>

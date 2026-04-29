@@ -10,8 +10,13 @@ import Slide07Raci from "./slides/Slide07Raci";
 import Slide08Mapa from "./slides/Slide08Mapa";
 import Slide09Riesgos from "./slides/Slide09Riesgos";
 import Slide10RiesgosAmb from "./slides/Slide10RiesgosAmb";
+import Slide11Organigrama from "./slides/Slide11Organigrama";
+import Slide12Presupuesto from "./slides/Slide12Presupuesto";
+import Slide13Procesos from "./slides/Slide13Procesos";
+import Slide14AmbSST from "./slides/Slide14AmbSST";
+import Slide15SegInfo from "./slides/Slide15SegInfo";
 
-const TOTAL = 10;
+const TOTAL = 15;
 
 const SLIDES = [
   Slide01Portada,
@@ -24,10 +29,15 @@ const SLIDES = [
   Slide08Mapa,
   Slide09Riesgos,
   Slide10RiesgosAmb,
+  Slide11Organigrama,
+  Slide12Presupuesto,
+  Slide13Procesos,
+  Slide14AmbSST,
+  Slide15SegInfo,
 ];
 
 export default function App() {
-  // 0 = home, 1-10 = slides
+  // 0 = home, 1-15 = slides
   const [page, setPage] = useState<number>(0);
 
   const goMenu = () => setPage(0);

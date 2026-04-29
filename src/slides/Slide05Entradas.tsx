@@ -47,7 +47,7 @@ export default function Slide05Entradas({ onNext, onBack, onMenu, current, total
           </div>
         </header>
 
-        <div className="slide-body" style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "3.5rem", alignItems: "center" }}>
+        <div className="slide-body body-grid body-1-2">
 
           {/* Left */}
           <div>
@@ -83,17 +83,18 @@ export default function Slide05Entradas({ onNext, onBack, onMenu, current, total
               Diagrama de Flujo — Sistema E-Commerce
             </p>
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem" }}>
+            <div className="flow-diagram">
 
               {/* Inputs */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <div className="flow-col">
                 <p style={{ fontSize: "0.62rem", color: "var(--ink-3)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.25rem", textAlign: "center" }}>Entradas</p>
                 {inputs.map(n => <NodeBox key={n} label={n} side="in" />)}
               </div>
 
               {/* Arrow + center */}
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ color: "var(--ink-3)", fontSize: "1.2rem" }}>→</span>
+              <div className="flow-center">
+                <span className="flow-arrow">→</span>
+                <span className="flow-arrow vertical">↓</span>
                 <div style={{
                   width: 90, height: 90,
                   borderRadius: "50%",
@@ -105,15 +106,17 @@ export default function Slide05Entradas({ onNext, onBack, onMenu, current, total
                   textAlign: "center",
                   lineHeight: 1.3,
                   boxShadow: "0 8px 24px rgba(26,24,20,0.15)",
+                  flexShrink: 0,
                 }}>
                   E-Commerce
                   <span style={{ fontSize: "0.6rem", fontFamily: "'DM Sans', sans-serif", color: "rgba(247,245,240,0.6)", fontWeight: 300, marginTop: 2 }}>DESARROLLO</span>
                 </div>
-                <span style={{ color: "var(--ink-3)", fontSize: "1.2rem" }}>→</span>
+                <span className="flow-arrow">→</span>
+                <span className="flow-arrow vertical">↓</span>
               </div>
 
               {/* Outputs */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <div className="flow-col">
                 <p style={{ fontSize: "0.62rem", color: "var(--ink-3)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.25rem", textAlign: "center" }}>Salidas</p>
                 {outputs.map(n => <NodeBox key={n} label={n} side="out" />)}
               </div>
