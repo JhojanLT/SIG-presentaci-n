@@ -7,21 +7,22 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { num: "01", title: "Portada",                       desc: "Presentación general del proyecto" },
-  { num: "02", title: "Objetivos",                     desc: "Objetivo general y específicos" },
-  { num: "03", title: "Política de Gestión",           desc: "Estrategia, valores y compromisos" },
-  { num: "04", title: "Alcance del Proyecto",          desc: "Geografía, funciones y socios" },
-  { num: "05", title: "Entradas y Salidas",            desc: "Diagrama del sistema e-commerce" },
-  { num: "06", title: "Partes Interesadas",            desc: "Mapa de stakeholders y poder" },
-  { num: "07", title: "Matriz RACI",                   desc: "Roles y responsabilidades" },
-  { num: "08", title: "Mapa de Procesos",              desc: "Estratégicos, misionales y de apoyo" },
-  { num: "09", title: "Matriz de Riesgos",             desc: "Identificación, nivel y controles" },
-  { num: "10", title: "Riesgos Ambientales",           desc: "Impactos y medidas de mitigación" },
-  { num: "11", title: "Organigrama",                   desc: "Estructura jerárquica y cargos" },
-  { num: "12", title: "Presupuesto Anual",              desc: "Distribución presupuestaria global" },
-  { num: "13", title: "Procesos Principales",           desc: "50 recursos de desarrollo y marketing" },
-  { num: "14", title: "Ambiental y SST",                desc: "Gestión ambiental y salud laboral" },
-  { num: "15", title: "Seguridad de la Información",    desc: "Protección de activos digitales" },
+  { num: "01", title: "Portada", desc: "Presentación general del proyecto" },
+  { num: "02", title: "Objetivos", desc: "Objetivo general y específicos" },
+  { num: "03", title: "Política de Gestión", desc: "Estrategia, valores y compromisos" },
+  { num: "04", title: "Alcance del Proyecto", desc: "Geografía, funciones y socios" },
+  { num: "05", title: "Entradas y Salidas", desc: "Diagrama del sistema e-commerce" },
+  { num: "06", title: "Partes Interesadas", desc: "Mapa de stakeholders y poder" },
+  { num: "07", title: "Matriz RACI", desc: "Roles y responsabilidades" },
+  { num: "08", title: "Mapa de Procesos", desc: "Estratégicos, misionales y de apoyo" },
+  { num: "09", title: "Matriz de Riesgos", desc: "Identificación, nivel y controles" },
+  { num: "10", title: "Riesgos Ambientales", desc: "Impactos y medidas de mitigación" },
+  { num: "11", title: "Organigrama", desc: "Estructura jerárquica y cargos" },
+  { num: "12", title: "Presupuesto Anual", desc: "Distribución presupuestaria global" },
+  { num: "13", title: "Procesos Principales", desc: "50 recursos de desarrollo y marketing" },
+  { num: "14", title: "Ambiental y SST", desc: "Gestión ambiental y salud laboral" },
+  { num: "15", title: "Seguridad de la Información", desc: "Protección de activos digitales" },
+  { num: "16", title: "Indicadores de Calidad", desc: "12 KPIs de calidad, ambiente, SST y seguridad" },
 ];
 
 interface HomePageProps {
@@ -433,7 +434,7 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
           /* 15 cards in 3 cols = 5 full rows. */
           .slide-card:nth-child(4n) { border-right: 1px solid var(--line); }
           .slide-card:nth-child(3n) { border-right: none; }
-          .slide-card:nth-child(n+13) { border-bottom: none; }
+          .slide-card:nth-child(n+16) { border-bottom: none; }
         }
 
         /* Tablet portrait — stack hero and switch to 2-col grid */
@@ -532,7 +533,7 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
             border-bottom: 1px solid var(--line);
             padding: 1.25rem 1.1rem;
           }
-          .slide-card:nth-child(15) { border-bottom: none; }
+          .slide-card:nth-child(16) { border-bottom: none; }
           .slide-card:nth-child(n) { border-right: none; }
 
           .card-num { margin-bottom: 0.85rem; }
@@ -548,11 +549,9 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
       `}</style>
 
       <div className="page">
-
         {/* ── HERO ── */}
         <section className="hero">
           <div className="hero-left">
-
             {/* Logo */}
             <div className="logo-row">
               <div className="logo-mark">🐾</div>
@@ -568,15 +567,15 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
               </div>
 
               <h1 className="hero-title">
-                Estrategia,<br />
-                <em>Procesos</em><br />
-                y Calidad
+                Estrategia,
+                <br />
+                <em>Procesos</em>
+                <br />y Calidad
               </h1>
 
               <p className="hero-desc">
-                Análisis estratégico y propuesta de esquema funcional
-                para optimizar el rendimiento, la competitividad y el
-                progreso organizacional de Animal-ID.
+                Análisis estratégico y propuesta de esquema funcional para optimizar el rendimiento, la competitividad y
+                el progreso organizacional de Animal-ID.
               </p>
 
               <button className="hero-cta" onClick={onStart}>
@@ -592,7 +591,7 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
                 <div className="stat-label">Países</div>
               </div>
               <div className="stat">
-                <div className="stat-num">15</div>
+                <div className="stat-num">16</div>
                 <div className="stat-label">Secciones</div>
               </div>
               <div className="stat">
@@ -600,7 +599,6 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
                 <div className="stat-label">Modelo</div>
               </div>
             </div>
-
           </div>
 
           {/* Image */}
@@ -622,7 +620,7 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
         <section>
           <div className="section-divider">
             <span className="section-divider-label">Contenido de la presentación</span>
-            <span className="section-divider-count">15 secciones</span>
+            <span className="section-divider-count">16 secciones</span>
           </div>
 
           <div className="slides-section">
@@ -631,7 +629,8 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
                 <div
                   key={i}
                   className="slide-card"
-                  onClick={() => onGoTo?.(i + 1)} onMouseEnter={() => setHovered(i)}
+                  onClick={() => onGoTo?.(i + 1)}
+                  onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}
                 >
                   <div className="card-num">{slide.num}</div>
@@ -652,7 +651,6 @@ export default function HomePage({ onStart, onGoTo }: HomePageProps) {
           </div>
           <span className="footer-right">Sistemas Integrados de Gestión · 2025</span>
         </footer>
-
       </div>
     </>
   );

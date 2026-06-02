@@ -15,8 +15,9 @@ import Slide12Presupuesto from "./slides/Slide12Presupuesto";
 import Slide13Procesos from "./slides/Slide13Procesos";
 import Slide14AmbSST from "./slides/Slide14AmbSST";
 import Slide15SegInfo from "./slides/Slide15SegInfo";
+import Slide16Indicadores from "./slides/Slide16Indicadores";
 
-const TOTAL = 15;
+const TOTAL = 16;
 
 const SLIDES = [
   Slide01Portada,
@@ -34,6 +35,7 @@ const SLIDES = [
   Slide13Procesos,
   Slide14AmbSST,
   Slide15SegInfo,
+  Slide16Indicadores,
 ];
 
 export default function App() {

@@ -11,27 +11,27 @@ interface Props {
 interface Row { actividad: string; recurso: string; horas: number; total: string; }
 
 const ambiental: Row[] = [
-  { actividad: "Residuos", recurso: "Recolección residuos", horas: 14, total: "$700" },
-  { actividad: "Residuos", recurso: "Disposición residuos especiales", horas: 4, total: "$400" },
-  { actividad: "Separación", recurso: "Canecas ecológicas", horas: 12, total: "$300" },
-  { actividad: "Separación", recurso: "Bolsas biodegradables", horas: 14, total: "$140" },
-  { actividad: "Saneamiento", recurso: "Limpieza y desinfección", horas: 14, total: "$420" },
-  { actividad: "Consumo", recurso: "Agua", horas: 14, total: "$500" },
-  { actividad: "Control", recurso: "Auditoría ambiental", horas: 6, total: "$600" },
-  { actividad: "Capacitación", recurso: "Formación ambiental", horas: 4, total: "$300" },
+  { actividad: "Residuos", recurso: "Recolección residuos", horas: 14, total: "$2,497,000" },
+  { actividad: "Residuos", recurso: "Disposición residuos especiales", horas: 4, total: "$1,427,000" },
+  { actividad: "Separación", recurso: "Canecas ecológicas", horas: 12, total: "$1,070,000" },
+  { actividad: "Separación", recurso: "Bolsas biodegradables", horas: 14, total: "$499,000" },
+  { actividad: "Saneamiento", recurso: "Limpieza y desinfección", horas: 14, total: "$1,498,000" },
+  { actividad: "Consumo", recurso: "Agua", horas: 14, total: "$1,784,000" },
+  { actividad: "Control", recurso: "Auditoría ambiental", horas: 6, total: "$2,140,000" },
+  { actividad: "Capacitación", recurso: "Formación ambiental", horas: 4, total: "$1,070,000" },
 ];
 
 const sst: Row[] = [
-  { actividad: "Protección", recurso: "Cascos de seguridad", horas: 12, total: "$240" },
-  { actividad: "Protección", recurso: "Guantes", horas: 14, total: "$140" },
-  { actividad: "Protección", recurso: "Gafas de seguridad", horas: 12, total: "$180" },
-  { actividad: "Protección", recurso: "Botas de seguridad", horas: 12, total: "$600" },
-  { actividad: "Evaluación", recurso: "Evaluación médica ocupacional", horas: 6, total: "$480" },
-  { actividad: "Riesgos", recurso: "Matriz de riesgos", horas: 8, total: "$400" },
-  { actividad: "Prevención", recurso: "Señalización", horas: 10, total: "$300" },
-  { actividad: "Capacitación", recurso: "Formación en SST", horas: 6, total: "$600" },
-  { actividad: "Control", recurso: "Inspecciones de seguridad", horas: 8, total: "$480" },
-  { actividad: "Gestión", recurso: "Software SST", horas: 14, total: "$500" },
+  { actividad: "Protección", recurso: "Cascos de seguridad", horas: 12, total: "$856,000" },
+  { actividad: "Protección", recurso: "Guantes", horas: 14, total: "$499,000" },
+  { actividad: "Protección", recurso: "Gafas de seguridad", horas: 12, total: "$642,000" },
+  { actividad: "Protección", recurso: "Botas de seguridad", horas: 12, total: "$2,140,000" },
+  { actividad: "Evaluación", recurso: "Evaluación médica ocupacional", horas: 6, total: "$1,712,000" },
+  { actividad: "Riesgos", recurso: "Matriz de riesgos", horas: 8, total: "$1,427,000" },
+  { actividad: "Prevención", recurso: "Señalización", horas: 10, total: "$1,070,000" },
+  { actividad: "Capacitación", recurso: "Formación en SST", horas: 6, total: "$2,140,000" },
+  { actividad: "Control", recurso: "Inspecciones de seguridad", horas: 8, total: "$1,712,000" },
+  { actividad: "Gestión", recurso: "Software SST", horas: 14, total: "$1,784,000" },
 ];
 
 const DataTable = ({ data, min }: { data: Row[]; min: number }) => (
@@ -99,7 +99,7 @@ export default function Slide14AmbSST({ onNext, onBack, onMenu, current, total }
                 <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "0.88rem", color: "var(--accent)" }}>
                   Gestión Ambiental
                 </span>
-                <span className="tag tag-green" style={{ marginLeft: "auto" }}>$3,360/mes</span>
+                <span className="tag tag-green" style={{ marginLeft: "auto" }}>$11,985,000/mes</span>
               </div>
               <DataTable data={ambiental} min={380} />
             </div>
@@ -111,7 +111,7 @@ export default function Slide14AmbSST({ onNext, onBack, onMenu, current, total }
                 <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "0.88rem", color: "#1D4ED8" }}>
                   Seguridad y Salud en el Trabajo
                 </span>
-                <span className="tag" style={{ marginLeft: "auto", background: "#EFF6FF", color: "#1D4ED8", borderColor: "rgba(29,78,216,0.2)" }}>$3,920/mes</span>
+                <span className="tag" style={{ marginLeft: "auto", background: "#EFF6FF", color: "#1D4ED8", borderColor: "rgba(29,78,216,0.2)" }}>$13,982,000/mes</span>
               </div>
               <DataTable data={sst} min={380} />
             </div>

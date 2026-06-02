@@ -1,7 +1,7 @@
 import { tokens, SLIDE_NAMES } from "./slideStyles";
 
 interface Props {
-  onNext?: () => void;
+  onNext: () => void;
   onBack: () => void;
   onMenu: () => void;
   current: number;
@@ -11,15 +11,15 @@ interface Props {
 interface Row { actividad: string; recurso: string; horas: number; total: string; }
 
 const data: Row[] = [
-  { actividad: "Protección", recurso: "Antivirus empresarial", horas: 14, total: "$300" },
-  { actividad: "Red", recurso: "Firewall", horas: 14, total: "$500" },
-  { actividad: "Acceso", recurso: "Gestión de usuarios", horas: 12, total: "$300" },
-  { actividad: "Backup", recurso: "Copias de seguridad (cloud)", horas: 14, total: "$800" },
-  { actividad: "Web", recurso: "Certificado SSL", horas: 12, total: "$200" },
-  { actividad: "Monitoreo", recurso: "Logs y monitoreo", horas: 14, total: "$400" },
-  { actividad: "Capacitación", recurso: "Formación en ciberseguridad", horas: 6, total: "$600" },
-  { actividad: "Gestión", recurso: "Políticas de seguridad", horas: 8, total: "$400" },
-  { actividad: "Auditoría", recurso: "Auditoría de seguridad", horas: 4, total: "$600" },
+  { actividad: "Protección", recurso: "Antivirus empresarial", horas: 14, total: "$1,070,000" },
+  { actividad: "Red", recurso: "Firewall", horas: 14, total: "$1,784,000" },
+  { actividad: "Acceso", recurso: "Gestión de usuarios", horas: 12, total: "$1,070,000" },
+  { actividad: "Backup", recurso: "Copias de seguridad (cloud)", horas: 14, total: "$2,854,000" },
+  { actividad: "Web", recurso: "Certificado SSL", horas: 12, total: "$713,000" },
+  { actividad: "Monitoreo", recurso: "Logs y monitoreo", horas: 14, total: "$1,427,000" },
+  { actividad: "Capacitación", recurso: "Formación en ciberseguridad", horas: 6, total: "$2,140,000" },
+  { actividad: "Gestión", recurso: "Políticas de seguridad", horas: 8, total: "$1,427,000" },
+  { actividad: "Auditoría", recurso: "Auditoría de seguridad", horas: 4, total: "$2,140,000" },
 ];
 
 const insights = [
@@ -37,7 +37,7 @@ const insights = [
   },
 ];
 
-export default function Slide15SegInfo({ onBack, onMenu, current, total }: Props) {
+export default function Slide15SegInfo({ onNext, onBack, onMenu, current, total }: Props) {
   return (
     <>
       <style>{tokens}</style>
@@ -97,7 +97,7 @@ export default function Slide15SegInfo({ onBack, onMenu, current, total }: Props
               <span style={{ fontSize: "0.72rem", color: "var(--bg)", fontWeight: 500 }}>Total mensual</span>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
                 <span style={{ fontSize: "0.68rem", color: "rgba(247,245,240,0.5)" }}>102 hrs</span>
-                <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "0.95rem", color: "var(--bg)" }}>$3,920</span>
+                <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "0.95rem", color: "var(--bg)" }}>$14,625,000</span>
               </div>
             </div>
           </div>
@@ -126,8 +126,8 @@ export default function Slide15SegInfo({ onBack, onMenu, current, total }: Props
                 Dato clave
               </p>
               <p style={{ fontSize: "0.83rem", color: "var(--ink-2)", lineHeight: 1.6, fontWeight: 300 }}>
-                La seguridad de la información representa solo el <strong style={{ color: "var(--ink)", fontWeight: 500 }}>0.005%</strong> del
-                presupuesto total, pero protege el <strong style={{ color: "var(--ink)", fontWeight: 500 }}>100%</strong> de los activos digitales de la organización.
+                La seguridad de la información representa el <strong style={{ color: "var(--ink)", fontWeight: 500 }}>12.4%</strong> del
+                presupuesto total, protegiendo el <strong style={{ color: "var(--ink)", fontWeight: 500 }}>100%</strong> de los activos digitales de la organización.
               </p>
             </div>
           </div>
@@ -136,13 +136,7 @@ export default function Slide15SegInfo({ onBack, onMenu, current, total }: Props
         <footer className="slide-footer">
           <button className="sf-btn" onClick={onBack}>← Anterior</button>
           <span className="sf-label">{SLIDE_NAMES[current - 1]}</span>
-          <button
-            className="sf-btn"
-            onClick={onMenu}
-            style={{ background: "var(--ink)", color: "var(--bg)", borderColor: "var(--ink)" }}
-          >
-            Volver al Menú ↗
-          </button>
+          <button className="sf-btn" onClick={onNext}>Siguiente →</button>
         </footer>
       </div>
     </>

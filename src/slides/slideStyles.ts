@@ -486,4 +486,5 @@ export const SLIDE_NAMES = [
   "Procesos Principales",
   "Ambiental y SST",
   "Seguridad de la Información",
+  "Indicadores de Calidad",
 ];

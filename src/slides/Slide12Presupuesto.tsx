@@ -9,15 +9,15 @@ interface Props {
 }
 
 const budget = [
-  { label: "Procesos Core", monthly: "$77,050,000", pct: 99.98 },
-  { label: "Recursos Aspectos Ambientales", monthly: "$3,360", pct: 0.004 },
-  { label: "Recursos Aspectos SST", monthly: "$3,920", pct: 0.005 },
-  { label: "Recursos Seguridad de la Información", monthly: "$3,920", pct: 0.005 },
+  { label: "Procesos Core", monthly: "$77,050,000", pct: 65.49 },
+  { label: "Recursos Aspectos Ambientales", monthly: "$11,985,000", pct: 10.19 },
+  { label: "Recursos Aspectos SST", monthly: "$13,982,000", pct: 11.88 },
+  { label: "Recursos Seguridad de la Información", monthly: "$14,625,000", pct: 12.43 },
 ];
 
 const totals = {
-  monthly: "$77,061,200",
-  annual: "$924,734,400",
+  monthly: "$117,642,000",
+  annual: "$1,411,704,000",
 };
 
 export default function Slide12Presupuesto({ onNext, onBack, onMenu, current, total }: Props) {
@@ -57,7 +57,7 @@ export default function Slide12Presupuesto({ onNext, onBack, onMenu, current, to
             <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", paddingTop: "1.5rem", borderTop: "1px solid var(--line)" }}>
               <div>
                 <p style={{ fontSize: "0.62rem", color: "var(--ink-3)", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 4, fontWeight: 500 }}>
-                  Mensual USD
+                  Mensual COP
                 </p>
                 <p style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1.6rem", color: "var(--ink)" }}>
                   {totals.monthly}
@@ -65,7 +65,7 @@ export default function Slide12Presupuesto({ onNext, onBack, onMenu, current, to
               </div>
               <div>
                 <p style={{ fontSize: "0.62rem", color: "var(--ink-3)", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 4, fontWeight: 500 }}>
-                  Anual USD
+                  Anual COP
                 </p>
                 <p style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1.6rem", color: "var(--accent)" }}>
                   {totals.annual}
